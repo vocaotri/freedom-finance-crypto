@@ -25,5 +25,8 @@ function estString($string, $lenght = 32):String {
                 break;
         }
     }
+    if(strlen($strResult) < $lenght) {
+        throw new Exception("String is not valid");
+    }
     return $strResult;
 }
